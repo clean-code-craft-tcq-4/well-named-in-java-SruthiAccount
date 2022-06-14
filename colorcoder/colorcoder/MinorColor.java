@@ -1,6 +1,6 @@
 package colorcoder;
 
-public enum MinorColor implements Color {
+public enum MinorColor {
 
     BLUE(0),
     ORANGE(1),
