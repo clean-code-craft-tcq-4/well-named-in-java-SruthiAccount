@@ -1,8 +1,6 @@
-package colorcoder;
-
 public class Main {
 
- static ColorPair GetColorFromPairNumber(int pairNumber) {
+ static ColorPair colorFromPairNumber(int pairNumber) {
         int zeroBasedPairNumber = pairNumber - 1;
         MajorColor majorColor = 
             MajorColor.fromIndex(zeroBasedPairNumber / ColorPair.totalMinorColors);
@@ -10,7 +8,7 @@ public class Main {
             MinorColor.fromIndex(zeroBasedPairNumber % ColorPair.totalMinorColors);
         return new ColorPair(majorColor, minorColor);
     }
-    static int GetPairNumberFromColor(MajorColor major, MinorColor minor) {
+    static int pairNumberFromColor(MajorColor major, MinorColor minor) {
         return major.getIndex() * ColorPair.totalMinorColors + minor.getIndex() + 1;
     }
 
@@ -18,7 +16,7 @@ public class Main {
         MajorColor expectedMajor,
         MinorColor expectedMinor)
     {
-        ColorPair colorPair = GetColorFromPairNumber(pairNumber);
+        ColorPair colorPair =colorFromPairNumber(pairNumber);
         System.out.println("Got pair " + colorPair.ToString());
         assert(colorPair.getMajor() == expectedMajor);
         assert(colorPair.getMinor() == expectedMinor);
@@ -29,7 +27,7 @@ public class Main {
         MinorColor minor,
         int expectedPairNumber)
     {
-        int pairNumber = GetPairNumberFromColor(major, minor);
+        int pairNumber = pairNumberFromColor(major, minor);
         System.out.println("Got pair number " + pairNumber);
         assert(pairNumber == expectedPairNumber);
     }

@@ -1,6 +1,4 @@
-package colorcoder;
-
-enum MajorColor{
+public enum MajorColor{
     WHITE(0),
     RED(1),
     BLACK(2),

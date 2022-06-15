@@ -1,5 +1,3 @@
-package colorcoder;
-
 public enum MinorColor {
 
     BLUE(0),
