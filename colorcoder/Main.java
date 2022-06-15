@@ -1,3 +1,4 @@
+package colorcoder;
 public class Main {
 
  static ColorPair colorFromPairNumber(int pairNumber) {
